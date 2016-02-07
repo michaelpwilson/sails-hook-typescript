@@ -1,0 +1,31 @@
+{
+  "name": "sails-hook-typescript",
+  "version": "1.0.0",
+  "description": "Sails JS hook to compile TypeScript files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/begot/sails-hook-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/begot/sails-hook-typescript/issues"
+  },
+  "homepage": "https://github.com/begot/sails-hook-typescript",
+  "devDependencies": {
+    "sails": "~0.11.0"
+  },
+  "sails": {
+    "isHook": true,
+    "hookName": "typescript"
+  },
+  "dependencies": {
+    "chokidar": "^1.4.2",
+    "typescript": "^1.7.5"
+  },
+  "contributors": [{
+    "name":  "Michael Wilson" 
+  }]
+}
