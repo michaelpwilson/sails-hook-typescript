@@ -1,4 +1,4 @@
-# sails-hook-autoreload
+# sails-hook-typescript
 
 [Sails JS](http://sailsjs.org) hook to compile & watch TypeScript files.
 
@@ -26,7 +26,7 @@ ignored       | ((array\|string\|regexp\|function)) |  Files and/or directories 
 
 ```javascript
 // [your-sails-app]/config/typescript.js
-module.exports.autoreload = {
+module.exports.typescript = {
   active: true,
   usePolling: false,
   dirs: [
