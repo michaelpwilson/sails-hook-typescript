@@ -19,6 +19,7 @@ Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
 active        | ((boolean)) | Whether or not the hook should compile & watch for TypeScript file changes.  Defaults to `true`.
 usePolling    | ((boolean)) | Whether or not to use the polling feature. Slower but necessary for certain environments. Defaults to `false`.
+compilerOptions | ((object)) | Options to the typescript compiler. You can learn more about these options in [Using the Compiler API](https://github.com/Microsoft/TypeScript/wiki/Using-the-Compiler-API) and [Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html).
 dirs          | ((array)) | Array of strings indicating which folders should be watched.  Defaults to the `assets/js`, 
 ignored       | ((array\|string\|regexp\|function)) |  Files and/or directories to be ignored. Pass a string to be directly matched, string with glob patterns, regular expression test, function that takes the testString as an argument and returns a truthy value if it should be matched, or an array of any number and mix of these types. For more examples look up [anymatch docs](https://github.com/es128/anymatch).
 
@@ -26,18 +27,22 @@ ignored       | ((array\|string\|regexp\|function)) |  Files and/or directories 
 
 ```javascript
 // [your-sails-app]/config/typescript.js
+var ts = require('typescript');
+
 module.exports.typescript = {
   active: true,
   usePolling: false,
+  compilerOptions: {
+    module: ts.ModuleKind.System
+  },
   dirs: [
-	"assets/js",
+    "assets/js",
     "assets/js/dependencies",
   ],
   ignored: [
     "assets/js/directorytoignore"
   ]
 };
-
 ```
 
 That&rsquo;s it!
