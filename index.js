@@ -28,7 +28,10 @@ module.exports = function(sails) {
         return cb();
       }
    
-      var compilerOptions = { module: ts.ModuleKind.System };
+      var compilerOptions = sails.config[this.configKey].compilerOptions;
+      if (!compilerOptions) {
+        compilerOptions = {module: ts.ModuleKind.System};
+      }
       
       self.checkIgnored = function(dir) {
         
