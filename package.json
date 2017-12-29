@@ -22,7 +22,7 @@
     "hookName": "typescript"
   },
   "dependencies": {
-    "chokidar": "^1.4.2",
+    "chokidar": "^2.0.0",
     "typescript": "^2.0.10"
   },
   "contributors": [{
