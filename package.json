@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/begot/sails-hook-typescript",
   "devDependencies": {
-    "sails": "~0.12.11"
+    "sails": "~1.2.2"
   },
   "sails": {
     "isHook": true,
